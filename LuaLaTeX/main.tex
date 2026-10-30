@@ -1,0 +1,73 @@
+% !TeX program = lualatex
+% Der sehende Stein - LaTeX Testprojekt
+% Compiler: LuaLaTeX (auch pdfLaTeX moeglich)
+\documentclass[11pt,a4paper,twoside]{book}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{inner=24mm,outer=19mm,top=23mm,bottom=23mm}
+\usepackage{multicol}
+\usepackage[most]{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{lettrine}
+\definecolor{ink}{HTML}{292923}
+\definecolor{wine}{HTML}{68332E}
+\definecolor{parchment}{HTML}{F5F0E5}
+\definecolor{oldgold}{HTML}{92764F}
+\color{ink}
+\hypersetup{colorlinks=true,linkcolor=wine,pdfauthor={Jörg Jacob mit ChatGPT},pdftitle={Der sehende Stein -- Ein Cthulhu-Abenteuer}}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\footnotesize\sffamily DER SEHENDE STEIN}
+\fancyhead[LO,RE]{\footnotesize\sffamily DER SEHENDE STEIN}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\titleformat{\chapter}[display]{\normalfont\Huge\bfseries\color{wine}}{}{0pt}{}[\vspace{2mm}\titlerule]
+\titlespacing*{\chapter}{0pt}{0pt}{16pt}
+\titleformat{\section}{\Large\bfseries\color{wine}}{}{0pt}{}
+\titleformat{\subsection}{\large\bfseries\color{wine}}{}{0pt}{}
+\newtcolorbox{vorlesetext}{enhanced,breakable,colback=parchment,colframe=oldgold,boxrule=.7pt,arc=1mm,left=10pt,right=10pt,top=9pt,bottom=9pt,before skip=12pt,after skip=12pt,title={\sffamily\bfseries VORLESETEXT --- KARIM EL-MADY (JÖRG)},colbacktitle=oldgold,coltitle=white,fonttitle=\footnotesize}
+\newtcolorbox{vorlesetextalle}{enhanced,breakable,colback=parchment,colframe=oldgold,boxrule=.7pt,arc=1mm,left=10pt,right=10pt,top=9pt,bottom=9pt,before skip=12pt,after skip=12pt,title={\sffamily\bfseries VORLESETEXT --- AN ALLE VIER SPIELER},colbacktitle=oldgold,coltitle=white,fonttitle=\footnotesize}
+\newtcolorbox{meisterinfo}{enhanced,breakable,colback=white,colframe=wine,boxrule=.6pt,arc=1mm,left=10pt,right=10pt,top=8pt,bottom=8pt,title={\sffamily\bfseries HINWEISE FÜR DIE SPIELLEITUNG},colbacktitle=wine,coltitle=white,fonttitle=\footnotesize}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{3pt}
+\begin{document}
+\begin{titlepage}
+\centering
+\vspace*{20mm}
+{\large\sffamily EIN ABENTEUER FÜR DAS CTHULHU-ROLLENSPIEL\par}
+\vspace{15mm}
+{\Huge\bfseries\color{wine} Der sehende Stein\par}
+\vspace{4mm}
+{\Large Akt I und II -- Arkham und Ägypten\par}
+\vspace{19mm}
+\includegraphics[width=0.33\textwidth,keepaspectratio]{bilder/miskatonic-siegel.png}\par
+\vspace{19mm}
+{\Large Akt I: Arkham $\circ$ Akt II: Ägypten\par}
+\vspace{4mm}
+{\large Akt I: Szenen 1 bis 3 und Akt II: Szenen 1 bis 5 und Epilog\par}
+\vfill
+{\sffamily\small ARBEITSFASSUNG $\circ$ 29. OKTOBER 2026\par}
+{\sffamily\footnotesize Interne Arbeitsfassung -- nicht zur Veröffentlichung\par}
+\end{titlepage}
+\tableofcontents
+\clearpage
+\input{kapitel/01-ankunft-universitaet.tex}
+\input{kapitel/02-verwaltungsgebaeude.tex}
+\input{kapitel/03-vorzimmer.tex}
+\input{kapitel/04-praesident.tex}
+\input{kapitel/05-carlson-haus.tex}
+\input{kapitel/06-bibliothek.tex}
+\input{kapitel/07-aufbruch-ins-ungewisse.tex}
+\input{kapitel/08-kairo.tex}
+\input{kapitel/09-expeditionslager.tex}
+\input{kapitel/10-katakomben.tex}
+\input{kapitel/11-finale-und-epilog.tex}
+\end{document}
